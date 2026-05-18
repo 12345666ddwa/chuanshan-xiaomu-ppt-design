@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>川山小牧喜 · 三创赛PPT设计参考</title>
+<style>
+/* ===== 全局 ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;padding:30px;color:#fff}
+.header{text-align:center;margin-bottom:40px}
+.header h1{color:#e2c992;font-size:26px;margin-bottom:8px}
+.header p{color:#718096;font-size:13px;line-height:1.8}
+/* ===== 幻灯片模拟 ===== */
+.slide{background:#fff;width:1067px;height:600px;margin:0 auto 50px;border-radius:12px;overflow:hidden;position:relative;box-shadow:0 8px 40px rgba(0,0,0,0.3)}
+.slide .content{position:absolute;top:0;left:0;width:100%;height:100%;padding:0}
+.slide .label{position:absolute;top:-28px;left:0;color:#718096;font-size:12px}
+.slide .label span{background:#e2c992;color:#1a1a2e;padding:2px 10px;border-radius:4px;font-weight:bold;margin-right:6px}
+
+/* ===== 共用元素 ===== */
+.badge{position:absolute;top:22px;left:30px;width:36px;height:36px;background:#1a365d;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:bold}
+.page-title{position:absolute;top:24px;left:76px;font-size:20px;font-weight:bold;color:#1a365d}
+.gold-line{position:absolute;top:52px;left:76px;width:100px;height:3px;background:#e2c992}
+.page-footer{position:absolute;bottom:0;left:0;width:100%;height:4px;background:#1a365d}
+.page-footer-text{position:absolute;bottom:15px;left:30px;font-size:9px;color:#a0aec0}
+
+/* ===== P1 封面 ===== */
+.p1{background:#1a365d}
+.p1 .gold-top{position:absolute;top:0;left:0;width:100%;height:5px;background:#e2c992}
+.p1 .gold-bar{position:absolute;left:38px;top:140px;width:3px;height:220px;background:#e2c992}
+.p1 .title{position:absolute;left:60px;top:160px;font-size:48px;font-weight:bold;color:#fff}
+.p1 .subtitle{position:absolute;left:60px;top:225px;font-size:20px;color:#e2c992}
+.p1 .meta{position:absolute;left:60px;top:340px;font-size:12px;color:#a0aec0;line-height:1.8}
+.p1 .gold-bottom{position:absolute;bottom:0;left:0;width:100%;height:5px;background:#e2c992}
+
+/* ===== P2 痛点 ===== */
+.p2 .photo-left{position:absolute;top:80px;left:0;width:510px;height:520px;background:#d4c9b8;display:flex;align-items:center;justify-content:center;color:#718096;font-size:13px}
+.p2 .photo-overlay{position:absolute;bottom:0;left:0;width:510px;height:100px;background:linear-gradient(transparent,#1a365d);padding:30px;padding-top:40px}
+.p2 .photo-overlay p{color:#fff;font-size:12px}
+.p2 .photo-overlay .gold{color:#e2c992;font-size:10px;margin-top:4px}
+.p2 .right-area{position:absolute;top:100px;left:550px;width:470px}
+.p2 .right-area .section-label{color:#718096;font-size:12px;margin-bottom:4px}
+.p2 .right-area .big-num{font-size:44px;font-weight:bold;color:#c0392b;line-height:1}
+.p2 .right-area .num-desc{font-size:11px;color:#718096;margin-bottom:10px}
+.p2 .right-area .vs{font-size:18px;color:#e2c992;font-weight:bold;margin:6px 0}
+.p2 .right-area .highlight-box{border:1px solid #e2c992;background:#fef8f0;border-radius:8px;padding:12px 16px;margin-top:20px}
+.p2 .right-area .highlight-box p{font-size:11px;color:#c0392b;font-weight:bold}
+.p2 .right-area .highlight-box .gray{color:#718096;font-weight:normal;margin-top:2px}
+
+/* ===== P3 痛点机遇 ===== */
+.p3 .left{position:absolute;top:75px;left:28px;width:480px;bottom:60px;border:1px solid #1a365d;border-radius:8px;padding:20px}
+.p3 .left .red-top{position:absolute;top:-1px;left:-1px;width:482px;height:5px;background:#c0392b;border-radius:8px 8px 0 0}
+.p3 .left h3{font-size:16px;color:#c0392b;margin-bottom:6px}
+.p3 .left .p-item{background:#fef8f0;padding:8px 12px;border-radius:6px;margin-bottom:6px;font-size:11px;color:#2d3748}
+.p3 .right-top{position:absolute;top:75px;left:540px;width:500px;height:200px;border:1px solid #2d5a8e;border-radius:8px;padding:20px}
+.p3 .right-top .blue-top{position:absolute;top:-1px;left:-1px;width:502px;height:5px;background:#2d5a8e;border-radius:8px 8px 0 0}
+.p3 .right-top h3{font-size:16px;color:#2d5a8e;margin-bottom:6px}
+.p3 .right-top .opp-item{display:flex;gap:12px;margin-bottom:8px}
+.p3 .right-top .opp-item .num{font-size:24px;font-weight:bold;min-width:80px}
+.p3 .right-top .opp-item .desc{font-size:11px;color:#718096;padding-top:6px}
+.p3 .gov-box{position:absolute;top:295px;left:540px;width:500px;height:230px;border:1px solid #e2c992;background:#fef8f0;border-radius:8px;padding:16px}
+.p3 .gov-box h4{font-size:14px;color:#1a365d;margin-bottom:4px}
+.p3 .gov-box .gold-top2{position:absolute;top:-1px;left:-1px;width:502px;height:5px;background:#e2c992;border-radius:8px 8px 0 0}
+.p3 .gov-box .ph{background:#f0eee8;border:1px dashed #e2c992;border-radius:6px;padding:8px;text-align:center;color:#e2c992;font-size:11px;margin-top:8px;width:160px;float:left;margin-right:12px}
+.p3 .gov-box .ph small{display:block;color:#a0aec0;font-size:9px;margin-top:4px}
+.p3 .gov-box .desc{float:left;padding-top:20px}
+.p3 .gov-box .desc p{font-size:12px;color:#1a365d;font-weight:bold}
+
+/* ===== P4 调研 ===== */
+.p4 .grid{position:absolute;top:72px;left:28px;right:28px;bottom:60px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.p4 .grid-item{background:#f0eee8;border:1px dashed #e2c992;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#e2c992;font-size:12px;font-weight:bold}
+.p4 .grid-item small{color:#a0aec0;font-size:9px;font-weight:normal;margin-top:4px}
+.p4 .bottom-bar{position:absolute;bottom:16px;left:30px;right:30px;height:28px;background:#1a365d;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#e2c992;font-size:10px}
+
+/* ===== P5 飞轮 ===== */
+.p5 .diagram{position:absolute;top:75px;left:28px;width:640px;height:440px;background:#f0eee8;display:flex;align-items:center;justify-content:center;color:#718096;border-radius:8px;font-size:12px}
+.p5 .side-card{position:absolute;top:75px;right:28px;width:350px;bottom:60px;border:1px solid #1a365d;border-radius:8px;padding:20px}
+.p5 .side-card h3{font-size:16px;color:#1a365d;margin-bottom:4px}
+.p5 .side-card .gold-l{width:80px;height:2px;background:#e2c992;margin-bottom:12px}
+.p5 .side-card .gear{font-size:12px;margin-bottom:10px;padding-left:8px;border-left:3px solid}
+.p5 .side-card .gear .name{font-weight:bold}
+.p5 .side-card .gear .desc{color:#718096;font-size:10px}
+
+/* ===== P6 三栏 ===== */
+.p6 .cols{position:absolute;top:72px;left:28px;right:28px;height:240px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.p6 .col{border-radius:8px;padding:14px;border:1px solid;position:relative}
+.p6 .col .col-top{position:absolute;top:-1px;left:-1px;right:-1px;height:4px;border-radius:8px 8px 0 0}
+.p6 .col h4{font-size:14px;margin-bottom:6px}
+.p6 .col .num-row{display:flex;gap:10px;margin-bottom:6px}
+.p6 .col .num-row .nv{font-size:20px;font-weight:bold}
+.p6 .col .num-row .nl{font-size:8px;color:#718096;text-align:center}
+.p6 .col .ph-mini{background:#f0eee8;border:1px dashed #e2c992;border-radius:4px;padding:6px;text-align:center;font-size:9px;color:#e2c992;margin-top:6px}
+.p6 .bottom-box{position:absolute;bottom:60px;left:28px;right:28px;height:50px;background:#fef8f0;border:1px solid #e2c992;border-radius:6px;padding:8px 14px;display:flex;align-items:center;gap:12px}
+.p6 .bottom-box .ph-sm{width:100px;height:30px;background:#f0eee8;border:1px dashed #e2c992;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;color:#e2c992}
+.p6 .bottom-box p{font-size:10px;color:#1a365d;font-weight:bold}
+.p6 .bottom-box small{font-size:9px;color:#718096;font-weight:normal}
+
+/* ===== P7 文化 ===== */
+.p7 .left-matrix{position:absolute;top:72px;left:28px;width:500px;height:280px;border:1px solid #e2c992;border-radius:8px;padding:16px}
+.p7 .left-matrix .gold-t{position:absolute;top:-1px;left:-1px;right:-1px;height:5px;background:#e2c992;border-radius:8px 8px 0 0}
+.p7 .left-matrix h4{font-size:16px;color:#1a365d;margin-bottom:4px}
+.p7 .left-matrix .item{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.p7 .left-matrix .item .dot{width:28px;height:28px;background:#1a365d;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px}
+.p7 .left-matrix .item .icon{font-size:11px;color:#1a365d;font-weight:bold}
+.p7 .left-matrix .item .val{font-size:11px;color:#718096}
+.p7 .right-photo{position:absolute;top:72px;left:550px;width:200px;height:280px;background:#f0eee8;border:1px dashed #e2c992;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#e2c992;font-size:11px}
+.p7 .right-photo small{color:#a0aec0;font-size:9px;margin-top:4px}
+.p7 .right-hotel{position:absolute;top:72px;left:770px;width:260px;height:130px;background:#f0eee8;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#718096;font-size:11px}
+.p7 .right-hotel2{position:absolute;top:215px;left:770px;width:260px;height:137px;background:#f0eee8;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#718096;font-size:11px}
+.p7 .bottom-bar{position:absolute;bottom:60px;left:28px;right:28px;height:100px;background:#1a365d;border-radius:8px;padding:16px 24px}
+.p7 .bottom-bar .big{font-size:32px;font-weight:bold;color:#e2c992}
+.p7 .bottom-bar small{font-size:10px;color:#fff}
+.p7 .bottom-bar .right-text{position:absolute;left:300px;top:25px}
+.p7 .bottom-bar .right-text p{font-size:10px;color:#fff}
+.p7 .bottom-bar .right-text .gold{color:#e2c992}
+
+/* ===== P8 飞轮总结 ===== */
+.p8{background:#1a365d}
+.p8 .gold-top{position:absolute;top:0;left:0;width:100%;height:5px;background:#e2c992}
+.p8 .diagram{position:absolute;top:80px;left:28px;width:600px;height:440px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);border-radius:8px}
+.p8 .side{position:absolute;top:80px;right:28px;width:380px}
+.p8 .side h3{font-size:16px;color:#e2c992;margin-bottom:10px}
+.p8 .side .step{font-size:11px;color:#d0d8e0;margin-bottom:5px;padding:3px 0}
+.p8 .side .step:last-child{color:#e2c992;font-weight:bold}
+.p8 .side .quote{font-size:12px;color:#e2c992;margin-top:12px;line-height:1.6}
+.p8 .gold-bottom{position:absolute;bottom:0;left:0;width:100%;height:5px;background:#e2c992}
+
+/* ===== P9 数据 ===== */
+.p9 .grid{position:absolute;top:72px;left:28px;right:28px;bottom:110px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.p9 .num-card{border-radius:8px;padding:20px 24px;border:1px solid;position:relative}
+.p9 .num-card .top-dot{position:absolute;top:-1px;left:-1px;right:-1px;height:4px;border-radius:8px 8px 0 0}
+.p9 .num-card .value{font-size:40px;font-weight:bold}
+.p9 .num-card .label{font-size:11px;color:#718096;margin-top:2px}
+.p9 .bottom{position:absolute;bottom:16px;left:28px;right:28px;height:46px;background:#fef8f0;border:1px solid #e2c992;border-radius:6px;padding:8px 14px;display:flex;align-items:center;gap:12px}
+.p9 .bottom .ph-sm{width:100px;height:30px;background:#f0eee8;border:1px dashed #e2c992;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;color:#e2c992}
+.p9 .bottom p{font-size:10px;color:#1a365d;font-weight:bold}
+
+/* ===== P10 社会 ===== */
+.p10 .left{position:absolute;top:72px;left:28px;width:480px;bottom:60px;border:1px solid #1a365d;border-radius:8px;padding:20px}
+.p10 .left .blue-top{position:absolute;top:-1px;left:-1px;width:482px;height:5px;background:#1a365d;border-radius:8px 8px 0 0}
+.p10 .left h3{font-size:16px;color:#1a365d;margin-bottom:4px}
+.p10 .left .gold-l{width:80px;height:2px;background:#e2c992;margin-bottom:10px}
+.p10 .left .stat{display:flex;gap:10px;margin-bottom:8px;align-items:center}
+.p10 .left .stat .num{font-size:22px;font-weight:bold;width:80px}
+.p10 .left .stat .desc{font-size:10px;color:#718096}
+.p10 .right{position:absolute;top:72px;left:535px;width:500px;height:280px;border:1px solid #e2c992;border-radius:8px;padding:16px}
+.p10 .right .gold-t{position:absolute;top:-1px;left:-1px;width:502px;height:5px;background:#e2c992;border-radius:8px 8px 0 0}
+.p10 .right h4{font-size:16px;color:#c0392b;margin-bottom:4px}
+.p10 .right .ph{height:180px;background:#f0eee8;border:1px dashed #e2c992;border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#e2c992;font-size:11px}
+.p10 .competition{position:absolute;bottom:60px;left:28px;right:28px;height:100px;border:1px solid #2d5a8e;border-radius:8px;padding:14px}
+.p10 .competition h4{font-size:14px;color:#1a365d;margin-bottom:4px}
+.p10 .competition .gold-l{width:80px;height:2px;background:#e2c992;margin-bottom:6px}
+.p10 .competition .text{position:absolute;left:400px;top:20px}
+.p10 .competition .text p{font-size:11px;color:#1a365d;font-weight:bold;line-height:1.6}
+
+/* ===== P11 团队 ===== */
+.p11 .photo-left{position:absolute;top:72px;left:0;width:530px;bottom:60px;background:#d4c9b8;display:flex;align-items:center;justify-content:center;color:#718096;font-size:13px;border-radius:0 8px 8px 0}
+.p11 .photo-caption{position:absolute;bottom:60px;left:0;width:530px;height:80px;background:linear-gradient(transparent,#1a365d);padding:20px 24px;padding-top:40px}
+.p11 .photo-caption p{color:#fff;font-size:12px}
+.p11 .photo-caption .gold{color:#e2c992;font-size:10px;margin-top:4px}
+.p11 .right-box{position:absolute;top:72px;right:28px;width:480px;height:200px;border:1px solid #1a365d;border-radius:8px;padding:16px}
+.p11 .right-box h4{font-size:15px;color:#1a365d;margin-bottom:2px}
+.p11 .right-box .gold-l{width:80px;height:2px;background:#e2c992;margin-bottom:6px}
+.p11 .right-box p{font-size:10px;color:#718096;line-height:1.8}
+.p11 .right-box .bold{color:#1a365d;font-weight:bold}
+.p11 .ph-sm{position:absolute;top:290px;right:28px;width:480px;height:90px;background:#f0eee8;border:1px dashed #e2c992;border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#e2c992;font-size:10px}
+.p11 .honor-box{position:absolute;bottom:60px;right:28px;width:480px;height:85px;background:#fef8f0;border:1px solid #e2c992;border-radius:6px;padding:12px 16px}
+.p11 .honor-box h4{font-size:13px;color:#1a365d;margin-bottom:2px}
+.p11 .honor-box p{font-size:9px;color:#718096}
+
+/* ===== P12 财务 ===== */
+.p12 .cols{position:absolute;top:72px;left:28px;right:28px;height:170px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.p12 .col{border-radius:8px;padding:16px;border:1px solid;position:relative}
+.p12 .col .top-dot{position:absolute;top:-1px;left:-1px;right:-1px;height:5px;border-radius:8px 8px 0 0}
+.p12 .col .yr{font-size:13px;margin-bottom:2px}
+.p12 .col .amt{font-size:28px;font-weight:bold}
+.p12 .metrics{position:absolute;top:265px;left:28px;right:28px;height:80px;border:1px solid #1a365d;border-radius:8px;padding:12px 20px;display:flex;gap:20px}
+.p12 .metrics .m-item .val{font-size:20px;font-weight:bold}
+.p12 .metrics .m-item .lbl{font-size:9px;color:#718096}
+.p12 .funding{position:absolute;bottom:60px;left:28px;right:28px;height:35px;background:#1a365d;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px}
+
+/* ===== P13 规划 ===== */
+.p13 .diagram{position:absolute;top:72px;left:28px;width:640px;height:445px;background:#f0eee8;display:flex;align-items:center;justify-content:center;color:#718096;border-radius:8px;font-size:12px}
+.p13 .side{position:absolute;top:72px;right:28px;width:350px}
+.p13 .stage{border-radius:8px;padding:12px 16px;border:1px solid;margin-bottom:10px;position:relative}
+.p13 .stage .top-dot{position:absolute;top:-1px;left:-1px;right:-1px;height:4px;border-radius:8px 8px 0 0}
+.p13 .stage .yr{font-size:10px}
+.p13 .stage .tt{font-size:14px;font-weight:bold;color:#1a365d}
+.p13 .stage .dt{font-size:9px;color:#718096}
+
+/* ===== P14 结尾 ===== */
+.p14{background:#1a365d}
+.p14 .gold-top{position:absolute;top:0;left:0;width:100%;height:5px;background:#e2c992}
+.p14 .gold-bar{position:absolute;left:38px;top:130px;width:3px;height:280px;background:#e2c992}
+.p14 .line1{position:absolute;left:60px;top:150px;font-size:18px;color:#fff}
+.p14 .line2{position:absolute;left:60px;top:185px;font-size:20px;color:#e2c992}
+.p14 .sep{position:absolute;left:60px;top:250px;width:140px;height:3px;background:#e2c992}
+.p14 .big1{position:absolute;left:60px;top:270px;font-size:34px;font-weight:bold;color:#fff}
+.p14 .big2{position:absolute;left:60px;top:320px;font-size:34px;font-weight:bold;color:#e2c992}
+.p14 .thanks{position:absolute;left:60px;top:400px;font-size:16px;color:#a0aec0}
+.p14 .team{position:absolute;left:60px;top:430px;font-size:12px;color:#a0aec0}
+.p14 .gold-bottom{position:absolute;bottom:0;left:0;width:100%;height:5px;background:#e2c992}
+
+/* ===== 备注区 ===== */
+.notes{max-width:1067px;margin:-30px auto 50px;background:#16213e;border-radius:10px;padding:20px;border:1px solid #0f3460}
+.notes h3{color:#e2c992;font-size:14px;margin-bottom:8px}
+.notes ul{color:#a0aec0;font-size:11px;line-height:1.8;padding-left:16px}
+.notes ul li{color:#718096}
+.notes ul li strong{color:#e2c992}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>川山小牧喜 · 三创赛路演 PPT 设计参考</h1>
+  <p>每页严格按1080x600 16:9比例模拟 | 配色: 深蓝#1A365D / 中蓝#2D5A8E / 藏金#E2C992 / 红#C0392B | 字体: 微软雅黑</p>
+</div>
+
+<!-- ====== P1 封面 ====== -->
+<div class="slide p1">
+  <div class="gold-top"></div>
+  <div class="gold-bar"></div>
+  <div class="title">川山小牧喜</div>
+  <div class="subtitle">共富飞轮驱动高原牦牛产业新生态</div>
+  <div class="meta">
+    第十六届三创赛 · 三农电子商务赛道<br>
+    四川农业大学 · 农味大袋鼠团队
+  </div>
+  <div class="gold-bottom"></div>
+</div>
+<div class="notes">
+  <h3>P1 封面 — 设计规则</h3>
+  <ul>
+    <li><strong>深蓝纯色背景</strong> (无图)，左上金线装饰，极简</li>
+    <li>标题 48pt Bold 白色，副标题 20pt 金色</li>
+    <li>底部信息 12pt 浅灰，不与标题抢视觉</li>
+    <li>底部贯穿金线 5px，顶部贯穿金线 5px</li>
+  </ul>
+</div>
+
+<!-- ====== P2 痛点 ====== -->
+<div class="slide p2">
+  <div class="badge">02</div><div class="page-title">一头牦牛，两重天地</div><div class="gold-line"></div>
+  <div class="photo-left">[ 采访牧民照片 ] &nbsp; 全出血 | 宽510px</div>
+  <div class="photo-overlay"><p>牧民零下20度放牧，一头牦牛养三年卖5,000元</p><p class="gold">12次深入松潘 · 210余户牧民</p></div>
+  <div class="right-area">
+    <div class="section-label">牧民端</div>
+    <div class="big-num">5,000元</div>
+    <div class="num-desc">一头牦牛养三年的收入</div>
+    <div class="vs">vs</div>
+    <div class="section-label">城市端</div>
+    <div class="big-num" style="color:#1a365d">上百元</div>
+    <div class="num-desc">一盘牦牛肉的售价</div>
+    <div class="highlight-box">
+      <p>87.84%的消费者愿意支付10%-50%溢价</p>
+      <p class="gray">市场呼唤新模式 —— 让牧民掌握产业链话语权</p>
+    </div>
+  </div>
+  <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
+</div>
+<div class="notes">
+  <h3>P2 痛点钩子 — 设计规则</h3>
+  <ul>
+    <li><strong>左半屏全出血照片</strong> (宽510px)，底部深蓝渐变叠文字</li>
+    <li><strong>右半屏两个48pt大字对比</strong> (红色 vs 深蓝)，中间金色"vs"分隔</li>
+    <li>底部金色边框高亮框放数据 (87.84%)</li>
+    <li>整页核心: 用视觉对比让评委一眼看到"剪刀差"</li>
+  </ul>
+</div>
+
+<!-- ====== P3 痛点机遇 ====== -->
+<div class="slide p3">
+  <div class="badge">03</div><div class="page-title">产业痛点与时代机遇</div><div class="gold-line"></div>
+  <div class="left">
+    <div class="red-top"></div>
+    <h3>五大核心痛点</h3>
+    <div class="p-item">1. 养殖分散无标准，附加值低</div>
+    <div class="p-item">2. 品牌弱，电商能力不足</div>
+    <div class="p-item">3. 冷链薄弱，消费者信任不足</div>
+    <div class="p-item">4. 牧民收益单一，无法分享产业链增值</div>
+    <div class="p-item">5. 线上线下割裂，文化价值难变现</div>
+  </div>
+  <div class="right-top">
+    <div class="blue-top"></div>
+    <h3>三大时代机遇</h3>
+    <div class="opp-item"><div class="num" style="color:#c0392b">87.84%</div><div class="desc">消费者愿意支付溢价</div></div>
+    <div class="opp-item"><div class="num" style="color:#1a365d">50%</div><div class="desc">中央预算投资覆盖率</div></div>
+    <div class="opp-item"><div class="num" style="color:#e2c992">68.92%</div><div class="desc">通过社交媒体了解品牌</div></div>
+  </div>
+  <div class="gov-box">
+    <div class="gold-top2"></div>
+    <h4>地方政府关注</h4>
+    <div class="ph">[ 县委副书记采访 ]<small>松潘之旅PPTX挑选</small></div>
+    <div class="desc"><p>松潘县委副书记</p><p style="font-size:9px;color:#718096;font-weight:normal">实地调研指导产业发展</p></div>
+  </div>
+  <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
+</div>
+<div class="notes">
+  <h3>P3 痛点机遇 — 设计规则</h3>
+  <ul>
+    <li><strong>左蓝框 + 右蓝框 + 底金框</strong> 三区块布局，清晰分区</li>
+    <li>痛点用暖红底条 (#fef8f0) 区分，机遇数字 24pt 彩色</li>
+    <li>政府支持用金色边框 + 金色顶条，<strong>暗示但不强调"政府背书"</strong></li>
+    <li>照片占位160px宽，不喧宾夺主</li>
+  </ul>
+</div>
+
+<!-- ====== P4 调研 ====== -->
+<div class="slide p4">
+  <div class="badge">04</div><div class="page-title">调研深度展示</div><div class="gold-line"></div>
+  <div style="position:absolute;top:54px;left:76px;font-size:9px;color:#a0aec0">12次深入松潘 · 3个乡镇 · 12个行政村</div>
+  <div class="grid">
+    <div class="grid-item">[ 会长采访照片 ]<small>从松潘之旅PPTX挑选</small></div>
+    <div class="grid-item">[ 屠宰场参观照片 ]<small>从松潘之旅PPTX挑选</small></div>
+    <div class="grid-item">[ 小商小贩调研照片 ]<small>从松潘之旅PPTX挑选</small></div>
+    <div class="grid-item">[ 牧民访谈照片 ]<small>从松潘之旅PPTX挑选</small></div>
+  </div>
+  <div class="bottom-bar">12次深入松潘 | 3个乡镇 | 12个行政村 | 210余户牧民 | 21人次深度访谈</div>
+  <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
+</div>
+<div class="notes">
+  <h3>P4 调研展示 — 设计规则</h3>
+  <ul>
+    <li><strong>2x2 四宫格</strong> 照片等大排列，整洁统一</li>
+    <li>照片占位用金色虚线框，标注内容和出处</li>
+    <li>底部深蓝横幅汇总调研数据，<strong>一句话说完调研深度</strong></li>
+    <li>这页是"实力证明"，不需要文字描述</li>
+  </ul>
+</div>
+
+<!-- ====== P5 飞轮 ====== -->
+<div class="slide p5">
+  <div class="badge">05</div><div class="page-title">共富飞轮模型</div><div class="gold-line"></div>
+  <div style="position:absolute;top:54px;left:76px;font-size:9px;color:#a0aec0">"四齿轮共富飞轮" —— 环环相扣、自循环加速</div>
+  <div class="diagram">[ 共富飞轮模型图 ] &nbsp; 640x440px</div>
+  <div class="side-card">
+    <h3>四大齿轮</h3>
+    <div class="gold-l"></div>
+    <div class="gear" style="border-color:#c0392b"><span class="name" style="color:#c0392b">齿轮1:</span> 共富根基 <span class="desc">牧民51%持股</span></div>
+    <div class="gear" style="border-color:#2d5a8e"><span class="name" style="color:#2d5a8e">齿轮2:</span> 电商引擎 <span class="desc">川山小牧喜小程序</span></div>
+    <div class="gear" style="border-color:#2d5a8e"><span class="name" style="color:#2d5a8e">齿轮3:</span> 双轮驱动 <span class="desc">一店一品+招募官</span></div>
+    <div class="gear" style="border-color:#e2c992"><span class="name" style="color:#b8863a">齿轮4:</span> 文化飞轮 <span class="desc">IP阿吉+文旅体验</span></div>
+    <div style="margin-top:12px;font-size:10px;color:#1a365d">每个齿轮为下一个注入动力</div>
+    <div style="font-size:11px;color:#c0392b;font-weight:bold">飞轮自我加速</div>
+  </div>
+  <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
+</div>
+<div class="notes">
+  <h3>P5 飞轮模型 — 设计规则</h3>
+  <ul>
+    <li><strong>左侧大图640px，右侧标注卡片350px</strong>，主次分明</li>
+    <li>右侧四个齿轮用左侧色条区分，颜色对应齿轮功能色</li>
+    <li>底部两行总结性文字，不需要大段描述</li>
+    <li>飞轮图是核心视觉，占用最大面积</li>
+  </ul>
+</div>
+
+<!-- ====== P6 三栏 ====== -->
+<div class="slide p6">
+  <div class="badge">06</div><div class="page-title">电商引擎 + 双轮驱动</div><div class="gold-line"></div>
+  <div style="position:absolute;top:54px;left:76px;font-size:9px;color:#a0aec0">齿轮2: 川山小牧喜小程序 | 齿轮3: 一店一品 + 城市招募官</div>
+  <div class="cols">
+    <div class="col" style="border-color:#2d5a8e">
+      <div class="col-top" style="background:#2d5a8e"></div>
+      <h4 style="color:#2d5a8e">川山小牧喜小程序</h4>
+      <div class="num-row"><div><div class="nv" style="color:#2d5a8e">12,680</div><div class="nl">注册用户</div></div><div><div class="nv" style="color:#1a365d">277.3万</div><div class="nl">GMV</div></div><div><div class="nv" style="color:#c0392b">35%</div><div class="nl">复购率</div></div></div>
+      <div class="ph-mini">[ 小程序截图 ]</div>
+    </div>
+    <div class="col" style="border-color:#c0392b">
+      <div class="col-top" style="background:#c0392b"></div>
+      <h4 style="color:#c0392b">一店一品</h4>
+      <div class="num-row"><div><div class="nv" style="color:#c0392b">300+</div><div class="nl">合作餐厅</div></div></div>
+      <div style="font-size:10px;color:#2d3748;margin-bottom:4px">零成本入驻 · 1%-7%分成</div>
+      <div class="ph-mini">[ 流程图 ]</div>
+    </div>
+    <div class="col" style="border-color:#e2c992">
+      <div class="col-top" style="background:#e2c992"></div>
+      <h4 style="color:#b8863a">城市招募官</h4>
+      <div class="num-row"><div><div class="nv" style="color:#c0392b">8,295元</div><div class="nl">推荐官最高月收入</div></div></div>
+      <div style="font-size:10px;color:#2d3748;margin-bottom:4px">300-500元/店+长期分成</div>
+      <div class="ph-mini">[ 签约信照片 ]</div>
+    </div>
+  </div>
+  <div class="bottom-box">
+    <div class="ph-sm">[ 排队照片 ]</div>
+    <div><p>蕃坊酥小蒙牛肉饼: 全国91家门店 · 累计营收超25亿元</p><small>单品验证了松潘牦牛肉的全国市场适配性</small></div>
+  </div>
+  <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
+</div>
+<div class="notes">
+  <h3>P6 电商+渠道 — 设计规则</h3>
+  <ul>
+    <li><strong>三列等宽卡片</strong>，每列顶部色条区分 (蓝/红/金)</li>
+    <li>每列只放 1-3 个核心数字，<strong>无多余文字</strong></li>
+    <li>底部金框放市场验证数据 + 排队照片</li>
+    <li>数字 20-28pt 彩色，标签 8pt 灰色</li>
+  </ul>
+</div>
+
+<!-- ====== P7 文化 ====== -->
+<div class="slide p7">
+  <div class="badge">07</div><div class="page-title">文化飞轮 · IP阿吉</div><div class="gold-line"></div>
+  <div style="position:absolute;top:54px;left:76px;font-size:9px;color:#a0aec0">从"卖牛肉"到"品文化" —— 让产品溢价来自文化认同</div>
+  <div class="left-matrix">
+    <div class="gold-t"></div>
+    <h4>IP内容矩阵</h4>
+    <div class="item"><div class="dot">&gt;</div><span class="icon">纪录片</span><span class="val">《高原上的阿吉》</span></div>
+    <div class="item"><div class="dot">&gt;</div><span class="icon">文学</span><span class="val">单行本《入冬》</span></div>
+    <div class="item"><div class="dot">&gt;</div><span class="icon">数字文创</span><span class="val">24枚表情包+状态背景</span></div>
+    <div class="item"><div class="dot">&gt;</div><span class="icon">短视频</span><span class="val">抖音/视频号内容矩阵</span></div>
+  </div>
+  <div class="right-photo">[ 会长手持IP照片 ]<small>最强文化背书!</small></div>
+  <div class="right-hotel">[ 酒店外景 ]</div>
+  <div class="right-hotel2">[ 酒店大厅 ]</div>
+  <div class="bottom-bar">
+    <div><div class="big">72%</div><small>用户愿为文化故事支付溢价</small></div>
+    <div class="right-text"><p>累计品牌曝光量超500万次 · UGC内容2,600+条</p><p class="gold">"吃住游学购"一站式文旅体验</p></div>
+  </div>
+  <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
+</div>
+<div class="notes">
+  <h3>P7 文化飞轮 — 设计规则</h3>
+  <ul>
+    <li><strong>左上IP矩阵 + 右上会长IP照片 (核心)</strong> + 右上酒店小图</li>
+    <li><strong>会长手持IP照片</strong> 放在这页最显眼位置 (被行业领袖认可的IP)</li>
+    <li>底部深蓝横幅放 72% 大数字 + 品牌数据</li>
+    <li>IP矩阵用蓝底方形小标 + 左对齐文字</li>
+  </ul>
+</div>
+
+<!-- ====== P8 飞轮总结 ====== -->
+<div class="slide p8">
+  <div class="gold-top"></div>
+  <div style="position:absolute;top:28px;left:30px;font-size:22px;font-weight:bold;color:#fff">08 飞轮逻辑：系统 vs 系统</div>
+  <div style="position:absolute;top:58px;left:30px;width:140px;height:3px;background:#e2c992"></div>
+  <div class="diagram">[ 共富飞轮图 ]</div>
+  <div class="side">
+    <h3>加速循环</h3>
+    <div class="step">共富根基 -> 优质原料</div>
+    <div class="step">电商引擎 -> 品牌信任</div>
+    <div class="step">双轮驱动 -> 渠道扩张</div>
+    <div class="step">文化飞轮 -> 品牌溢价</div>
+    <div class="step">溢价回流 -> 牧民分红</div>
+    <div class="step">牧民增收 -> 供应更优</div>
+    <div class="step">飞轮自我加速</div>
+    <div class="quote">
+      任何一个齿轮能被模仿，<br>
+      但四个齿轮的咬合机制无法复制。<br>
+      <strong>因为只有系统，才能对抗系统。</strong>
+    </div>
+  </div>
+  <div class="gold-bottom"></div>
+</div>
+<div class="notes">
+  <h3>P8 飞轮总结 — 设计规则</h3>
+  <ul>
+    <li><strong>全深蓝背景</strong>，与白色内容页形成视觉对比，作为演讲高潮</li>
+    <li>左侧飞轮图 + 右侧循环步骤列表</li>
+    <li>结尾三句话作为"金句"，颜色金色加粗</li>
+    <li>整页暗示: 这是全篇的"系统 vs 系统"论点转折点</li>
+  </ul>
+</div>
+
+<!-- ====== P9 数据 ====== -->
+<div class="slide p9">
+  <div class="badge">09</div><div class="page-title">运营实效数据</div><div class="gold-line"></div>
+  <div style="position:absolute;top:54px;left:76px;font-size:9px;color:#a0aec0">上线8个月数据验证</div>
+  <div class="grid">
+    <div class="num-card" style="border-color:#1a365d"><div class="top-dot" style="background:#1a365d"></div><div class="value" style="color:#1a365d">12,680</div><div class="label">注册用户</div></div>
+    <div class="num-card" style="border-color:#2d5a8e"><div class="top-dot" style="background:#2d5a8e"></div><div class="value" style="color:#2d5a8e">277.3万</div><div class="label">GMV (元)</div></div>
+    <div class="num-card" style="border-color:#c0392b"><div class="top-dot" style="background:#c0392b"></div><div class="value" style="color:#c0392b">35%</div><div class="label">复购率</div></div>
+    <div class="num-card" style="border-color:#e2c992"><div class="top-dot" style="background:#e2c992"></div><div class="value" style="color:#b8863a">20.7%</div><div class="label">月复合增长率</div></div>
+  </div>
+  <div class="bottom">
+    <div class="ph-sm">[ 排队 ]</div>
+    <p>牦牛牛肉饼: 22,800份 | 32%复购率 | 直播转化率6.2%</p>
+  </div>
+  <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
+</div>
+<div class="notes">
+  <h3>P9 运营数据 — 设计规则</h3>
+  <ul>
+    <li><strong>2x2 四宫格，每个数字40pt</strong>，占卡片几乎全部面积</li>
+    <li>每个卡片顶部色条区分 (蓝/中蓝/红/金)，<strong>看一眼就知道是哪类数据</strong></li>
+    <li>底部一条金框 + 排队照片 + 一句话补充</li>
+    <li>整页只展示数字，不解释，让数字自己说话</li>
+  </ul>
+</div>
+
+<!-- ====== P10 社会价值 ====== -->
+<div class="slide p10">
+  <div class="badge">10</div><div class="page-title">社会价值与共富成效</div><div class="gold-line"></div>
+  <div style="position:absolute;top:54px;left:76px;font-size:9px;color:#a0aec0">企业49% + 牧民51% 共富机制</div>
+  <div class="left">
+    <div class="blue-top"></div>
+    <h3>电商助农成效</h3>
+    <div class="gold-l"></div>
+    <div class="stat"><div class="num" style="color:#1a365d">86户</div><div class="desc">农牧民覆盖</div></div>
+    <div class="stat"><div class="num" style="color:#c0392b">6,800元</div><div class="desc">户均年增收</div></div>
+    <div class="stat"><div class="num" style="color:#e2c992">22个</div><div class="desc">就业岗位 (68%藏族)</div></div>
+    <div class="stat"><div class="num" style="color:#2d5a8e">286人次</div><div class="desc">电商技能培训</div></div>
+  </div>
+  <div class="right">
+    <div class="gold-t"></div>
+    <h4>牧民的心声</h4>
+    <div class="ph">[ 牧民感谢信 ]<br><small>最具说服力的民意佐证</small></div>
+  </div>
+  <div class="competition">
+    <h4>差异化竞争优势</h4>
+    <div class="gold-l"></div>
+    <div style="font-size:10px;color:#718096">实体产品 + 文化品牌 + 电商直达 + 深度体验 四位一体</div>
+    <div class="text"><p>"实体产品 + 文化品牌 + 电商直达 + 深度体验" 四位一体</p><p style="font-size:9px;color:#718096;font-weight:normal">区块链溯源 · 一物一码 · 牧民控股51%</p></div>
+  </div>
+  <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
+</div>
+<div class="notes">
+  <h3>P10 社会价值 — 设计规则</h3>
+  <ul>
+    <li><strong>左蓝框数据列 + 右金框感谢信</strong>，一理性一感性</li>
+    <li>左侧四个数据22pt彩色，蓝/红/金/中蓝四色区分</li>
+    <li>右侧感谢信是整页情感核心，占最大面积</li>
+    <li>底部蓝边框放竞争优势总结，一句话说完</li>
+  </ul>
+</div>
+
+<!-- ====== P11 团队 ====== -->
+<div class="slide p11">
+  <div class="badge">11</div><div class="page-title">团队介绍</div><div class="gold-line"></div>
+  <div class="photo-left">[ 团队调研合影 ] &nbsp; 全出血 | 宽530px</div>
+  <div class="photo-caption"><p>12次深入松潘 · 零下20度田间调研</p><p class="gold">松潘县数字化助农示范项目 · 校级优秀社会实践团队</p></div>
+  <div class="right-box">
+    <h4>川农大跨学科团队</h4>
+    <div class="gold-l"></div>
+    <p><span class="bold">专业覆盖:</span> 经济 · 管理 · 食品 · 计算机</p>
+    <p><span class="bold">导师矩阵:</span></p>
+    <p>思政导师(拔高立意) | 经管导师(打磨模式)</p>
+    <p>食品博士(技术支撑) | 本土企业导师(落地保障)</p>
+  </div>
+  <div class="ph-sm">[ 校内分享活动照片 ]<small>校级优秀社会实践团队受邀专题分享</small></div>
+  <div class="honor-box">
+    <h4>已获认可</h4>
+    <p>松潘县数字化助农示范项目 · 成都日报专题报道 · 四川省农博会展区</p>
+  </div>
+  <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
+</div>
+<div class="notes">
+  <h3>P11 团队 — 设计规则</h3>
+  <ul>
+    <li><strong>左侧530px全出血团队合影</strong>，底部深蓝渐变叠文字</li>
+    <li>右上的"川农大跨学科团队"卡片放核心信息</li>
+    <li>右下的"已获认可"金框放奖项背书</li>
+    <li>中间金色虚线框 = 校内分享活动照片</li>
+  </ul>
+</div>
+
+<!-- ====== P12 财务 ====== -->
+<div class="slide p12">
+  <div class="badge">12</div><div class="page-title">财务概览</div><div class="gold-line"></div>
+  <div class="cols">
+    <div class="col" style="border-color:#2d5a8e"><div class="top-dot" style="background:#2d5a8e"></div><div class="yr" style="color:#2d5a8e">2025营收</div><div class="amt" style="color:#1a365d">1,800万</div></div>
+    <div class="col" style="border-color:#1a365d"><div class="top-dot" style="background:#1a365d"></div><div class="yr" style="color:#1a365d">2026营收</div><div class="amt" style="color:#1a365d">2,700万</div></div>
+    <div class="col" style="border-color:#c0392b"><div class="top-dot" style="background:#c0392b"></div><div class="yr" style="color:#c0392b">2027营收</div><div class="amt" style="color:#1a365d">3,600万</div></div>
+  </div>
+  <div class="metrics">
+    <div class="m-item"><div class="val" style="color:#c0392b">26.4%</div><div class="lbl">投资回报率</div></div>
+    <div class="m-item"><div class="val" style="color:#1a365d">3.8年</div><div class="lbl">投资回收期</div></div>
+    <div class="m-item"><div class="val" style="color:#e2c992">30%-45%</div><div class="lbl">毛利率</div></div>
+    <div class="m-item"><div class="val" style="color:#2d5a8e">122.7万</div><div class="lbl">月盈亏平衡点</div></div>
+  </div>
+  <div class="funding">资金结构: 政策资金20% + 企业自筹50% + 银行贷款30% | 中央预算内投资最高覆盖总投资的50%</div>
+  <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
+</div>
+<div class="notes">
+  <h3>P12 财务 — 设计规则</h3>
+  <ul>
+    <li><strong>三列营收柱状卡片</strong> (蓝/中蓝/红)，28pt数字</li>
+    <li>中间"核心指标"四列并排，简洁清晰</li>
+    <li>底部深蓝条资金结构，一行说完</li>
+    <li>财务页<strong>不要多余文字</strong>，数字和指标本身就有说服力</li>
+  </ul>
+</div>
+
+<!-- ====== P13 规划 ====== -->
+<div class="slide p13">
+  <div class="badge">13</div><div class="page-title">发展规划</div><div class="gold-line"></div>
+  <div class="diagram">[ 实施路线图 ] &nbsp; 640x445px</div>
+  <div class="side">
+    <div class="stage" style="border-color:#2d5a8e"><div class="top-dot" style="background:#2d5a8e"></div><div class="yr" style="color:#2d5a8e">2025</div><div class="tt">深耕成渝</div><div class="dt">用户5万/GMV 600万<br>一店一品拓300店</div></div>
+    <div class="stage" style="border-color:#1a365d"><div class="top-dot" style="background:#1a365d"></div><div class="yr" style="color:#1a365d">2026</div><div class="tt">辐射西南</div><div class="dt">用户12万/GMV 1,500万<br>川西10家体验站</div></div>
+    <div class="stage" style="border-color:#c0392b"><div class="top-dot" style="background:#c0392b"></div><div class="yr" style="color:#c0392b">2027-28</div><div class="tt">走向全国</div><div class="dt">用户25万/GMV 3,000万<br>电商标杆品牌</div></div>
+  </div>
+  <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
+</div>
+<div class="notes">
+  <h3>P13 规划 — 设计规则</h3>
+  <ul>
+    <li><strong>左侧路线图 + 右侧三阶段卡片</strong></li>
+    <li>三阶段用蓝/深蓝/红三色区分，顶部色条对应</li>
+    <li>每阶段一行数字 + 一行关键动作，<strong>不展开不解释</strong></li>
+  </ul>
+</div>
+
+<!-- ====== P14 结尾 ====== -->
+<div class="slide p14">
+  <div class="gold-top"></div>
+  <div class="gold-bar"></div>
+  <div class="line1">今天转动的，是一个"川山小牧喜"的小程序；</div>
+  <div class="line2">明天我们期待的，是千千万万个高原家庭因电商而改变的生活。</div>
+  <div class="sep"></div>
+  <div class="big1">川山万里，小牧启程。</div>
+  <div class="big2">牧企同兴，我们在路上。</div>
+  <div class="thanks">恳请各位评委老师支持！谢谢大家！</div>
+  <div class="team">四川农业大学 · 农味大袋鼠团队</div>
+  <div class="gold-bottom"></div>
+</div>
+<div class="notes">
+  <h3>P14 结尾 — 设计规则</h3>
+  <ul>
+    <li><strong>全深蓝呼应封面</strong>，左上金线装饰，视觉闭环</li>
+    <li>情感升华文字分节奏: 陈述(18pt) -> 金句(20pt) -> 分隔线 -> 大字(34pt) -> 致谢</li>
+    <li>底部金线，整页简洁大气，不要杂元素</li>
+  </ul>
+</div>
+
+<div style="max-width:1067px;margin:30px auto;background:#16213e;border-radius:10px;padding:24px;border:1px solid #0f3460">
+  <h3 style="color:#e2c992;font-size:16px;margin-bottom:10px">整体设计规范</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;color:#a0aec0;font-size:11px;line-height:1.8">
+    <div>
+      <p style="color:#e2c992;font-weight:bold;margin-bottom:6px">排版规则</p>
+      <p>每页统一页眉: 蓝徽章+标题+金线</p>
+      <p>每页统一页脚: 金线+蓝底+项目名</p>
+      <p>一页一个核心信息</p>
+      <p>数字 ≥ 28pt，标题 20pt，正文 ≤ 12pt</p>
+      <p>三栏布局间距 12px</p>
+    </div>
+    <div>
+      <p style="color:#e2c992;font-weight:bold;margin-bottom:6px">配色体系</p>
+      <p style="color:#1a365d">■ 深蓝 #1A365D (主色)</p>
+      <p style="color:#2d5a8e">■ 中蓝 #2D5A8E (辅色)</p>
+      <p style="color:#e2c992">■ 藏金 #E2C992 (点缀)</p>
+      <p style="color:#c0392b">■ 红色 #C0392B (强调)</p>
+      <p style="color:#718096">■ 灰色 #718096 (正文/辅助)</p>
+    </div>
+    <div>
+      <p style="color:#e2c992;font-weight:bold;margin-bottom:6px">照片处理</p>
+      <p>有照片: 调成统一冷暖色调 + 圆角</p>
+      <p>底部叠加深蓝渐变文字说明</p>
+      <p>占位: 金色虚线框 + 标注内容</p>
+      <p>照片不缩小、不裁剪成奇怪比例</p>
+      <p>合照/人脸特写优先选有情绪的</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
