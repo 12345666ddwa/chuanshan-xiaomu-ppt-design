@@ -11,11 +11,9 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
 .header{text-align:center;margin-bottom:40px}
 .header h1{color:#e2c992;font-size:26px;margin-bottom:8px}
 .header p{color:#718096;font-size:13px;line-height:1.8}
+.header .tagline{color:#5a7a9a;font-size:11px;margin-top:4px}
 /* ===== 幻灯片模拟 ===== */
 .slide{background:#fff;width:1067px;height:600px;margin:0 auto 50px;border-radius:12px;overflow:hidden;position:relative;box-shadow:0 8px 40px rgba(0,0,0,0.3)}
-.slide .content{position:absolute;top:0;left:0;width:100%;height:100%;padding:0}
-.slide .label{position:absolute;top:-28px;left:0;color:#718096;font-size:12px}
-.slide .label span{background:#e2c992;color:#1a1a2e;padding:2px 10px;border-radius:4px;font-weight:bold;margin-right:6px}
 
 /* ===== 共用元素 ===== */
 .badge{position:absolute;top:22px;left:30px;width:36px;height:36px;background:#1a365d;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:bold}
@@ -80,6 +78,18 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
 .p5 .side-card .gear{font-size:12px;margin-bottom:10px;padding-left:8px;border-left:3px solid}
 .p5 .side-card .gear .name{font-weight:bold}
 .p5 .side-card .gear .desc{color:#718096;font-size:10px}
+
+/* ===== P5b 技术壁垒 (新增) ===== */
+.p5b .three-col{position:absolute;top:72px;left:28px;right:28px;height:420px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.p5b .tc{border-radius:8px;padding:20px;border:1px solid;position:relative}
+.p5b .tc .top-dot{position:absolute;top:-1px;left:-1px;right:-1px;height:5px;border-radius:8px 8px 0 0}
+.p5b .tc h4{font-size:15px;margin-bottom:4px}
+.p5b .tc .icon-area{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;margin-bottom:10px}
+.p5b .tc .desc{font-size:10px;color:#718096;line-height:1.7}
+.p5b .tc .ph-mini{background:#f0eee8;border:1px dashed #e2c992;border-radius:4px;padding:6px;text-align:center;font-size:9px;color:#e2c992;margin-top:8px}
+.p5b .bottom-bar{position:absolute;bottom:16px;left:28px;right:28px;height:50px;background:#1a365d;border-radius:6px;display:flex;align-items:center;justify-content:center;gap:20px}
+.p5b .bottom-bar .b-item{font-size:11px;color:#e2c992;display:flex;align-items:center;gap:6px}
+.p5b .bottom-bar .b-item .dot{width:6px;height:6px;background:#e2c992;border-radius:50%;display:inline-block}
 
 /* ===== P6 三栏 ===== */
 .p6 .cols{position:absolute;top:72px;left:28px;right:28px;height:240px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
@@ -150,8 +160,8 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
 .p10 .competition{position:absolute;bottom:60px;left:28px;right:28px;height:100px;border:1px solid #2d5a8e;border-radius:8px;padding:14px}
 .p10 .competition h4{font-size:14px;color:#1a365d;margin-bottom:4px}
 .p10 .competition .gold-l{width:80px;height:2px;background:#e2c992;margin-bottom:6px}
-.p10 .competition .text{position:absolute;left:400px;top:20px}
-.p10 .competition .text p{font-size:11px;color:#1a365d;font-weight:bold;line-height:1.6}
+.p10 .competition .four{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-top:4px}
+.p10 .competition .four .pill{background:#fef8f0;border:1px solid #e2c992;border-radius:20px;padding:4px 10px;text-align:center;font-size:10px;color:#1a365d}
 
 /* ===== P11 团队 ===== */
 .p11 .photo-left{position:absolute;top:72px;left:0;width:530px;bottom:60px;background:#d4c9b8;display:flex;align-items:center;justify-content:center;color:#718096;font-size:13px;border-radius:0 8px 8px 0}
@@ -212,8 +222,9 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
 <body>
 
 <div class="header">
-  <h1>川山小牧喜 · 三创赛路演 PPT 设计参考</h1>
-  <p>每页严格按1080x600 16:9比例模拟 | 配色: 深蓝#1A365D / 中蓝#2D5A8E / 藏金#E2C992 / 红#C0392B | 字体: 微软雅黑</p>
+  <h1>川山小牧喜 · 三创赛路演 PPT 设计参考 (V2)</h1>
+  <p>每页严格按 1067x600px 16:9 比例模拟 | 配色: 深蓝#1A365D / 中蓝#2D5A8E / 藏金#E2C992 / 红#C0392B</p>
+  <p class="tagline">共15页 | 新增P6"技术壁垒与品质保障" | 支撑论断: 数据库 + 团体标准 + 溯源体系</p>
 </div>
 
 <!-- ====== P1 封面 ====== -->
@@ -233,8 +244,7 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
   <ul>
     <li><strong>深蓝纯色背景</strong> (无图)，左上金线装饰，极简</li>
     <li>标题 48pt Bold 白色，副标题 20pt 金色</li>
-    <li>底部信息 12pt 浅灰，不与标题抢视觉</li>
-    <li>底部贯穿金线 5px，顶部贯穿金线 5px</li>
+    <li>底部贯穿金线 5px，顶部贯穿金线 5px，视觉闭环</li>
   </ul>
 </div>
 
@@ -261,10 +271,9 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
 <div class="notes">
   <h3>P2 痛点钩子 — 设计规则</h3>
   <ul>
-    <li><strong>左半屏全出血照片</strong> (宽510px)，底部深蓝渐变叠文字</li>
-    <li><strong>右半屏两个48pt大字对比</strong> (红色 vs 深蓝)，中间金色"vs"分隔</li>
-    <li>底部金色边框高亮框放数据 (87.84%)</li>
-    <li>整页核心: 用视觉对比让评委一眼看到"剪刀差"</li>
+    <li><strong>左半屏全出血照片</strong>，底部深蓝渐变叠文字</li>
+    <li><strong>右半屏两个48pt大字对比</strong> (红色5,000元 vs 深蓝上百元)，中间金色"vs"</li>
+    <li>底部金色框放核心数据 (87.84%)</li>
   </ul>
 </div>
 
@@ -274,9 +283,9 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
   <div class="left">
     <div class="red-top"></div>
     <h3>五大核心痛点</h3>
-    <div class="p-item">1. 养殖分散无标准，附加值低</div>
+    <div class="p-item">1. 养殖分散<strong>无标准</strong>，附加值低</div>
     <div class="p-item">2. 品牌弱，电商能力不足</div>
-    <div class="p-item">3. 冷链薄弱，消费者信任不足</div>
+    <div class="p-item">3. 冷链薄弱，<strong>溯源缺失</strong>，消费者信任不足</div>
     <div class="p-item">4. 牧民收益单一，无法分享产业链增值</div>
     <div class="p-item">5. 线上线下割裂，文化价值难变现</div>
   </div>
@@ -298,10 +307,8 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
 <div class="notes">
   <h3>P3 痛点机遇 — 设计规则</h3>
   <ul>
-    <li><strong>左蓝框 + 右蓝框 + 底金框</strong> 三区块布局，清晰分区</li>
-    <li>痛点用暖红底条 (#fef8f0) 区分，机遇数字 24pt 彩色</li>
-    <li>政府支持用金色边框 + 金色顶条，<strong>暗示但不强调"政府背书"</strong></li>
-    <li>照片占位160px宽，不喧宾夺主</li>
+    <li>痛点第1条标注"<strong>无标准</strong>"、第3条标注"<strong>溯源缺失</strong>" —— 与P6技术方案呼应</li>
+    <li><strong>先展示问题 → 再展示解决方案</strong>的叙事结构</li>
   </ul>
 </div>
 
@@ -318,15 +325,6 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
   <div class="bottom-bar">12次深入松潘 | 3个乡镇 | 12个行政村 | 210余户牧民 | 21人次深度访谈</div>
   <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
 </div>
-<div class="notes">
-  <h3>P4 调研展示 — 设计规则</h3>
-  <ul>
-    <li><strong>2x2 四宫格</strong> 照片等大排列，整洁统一</li>
-    <li>照片占位用金色虚线框，标注内容和出处</li>
-    <li>底部深蓝横幅汇总调研数据，<strong>一句话说完调研深度</strong></li>
-    <li>这页是"实力证明"，不需要文字描述</li>
-  </ul>
-</div>
 
 <!-- ====== P5 飞轮 ====== -->
 <div class="slide p5">
@@ -340,24 +338,77 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
     <div class="gear" style="border-color:#2d5a8e"><span class="name" style="color:#2d5a8e">齿轮2:</span> 电商引擎 <span class="desc">川山小牧喜小程序</span></div>
     <div class="gear" style="border-color:#2d5a8e"><span class="name" style="color:#2d5a8e">齿轮3:</span> 双轮驱动 <span class="desc">一店一品+招募官</span></div>
     <div class="gear" style="border-color:#e2c992"><span class="name" style="color:#b8863a">齿轮4:</span> 文化飞轮 <span class="desc">IP阿吉+文旅体验</span></div>
-    <div style="margin-top:12px;font-size:10px;color:#1a365d">每个齿轮为下一个注入动力</div>
+    <div style="margin-top:8px;font-size:10px;color:#1a365d">每个齿轮为下一个注入动力</div>
     <div style="font-size:11px;color:#c0392b;font-weight:bold">飞轮自我加速</div>
   </div>
   <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
 </div>
+
+<!-- ====== ★ P6 新增: 技术壁垒与品质保障 ====== -->
+<div class="slide p5b">
+  <div class="badge">06</div><div class="page-title">技术壁垒与品质保障</div><div class="gold-line"></div>
+  <div style="position:absolute;top:54px;left:76px;font-size:9px;color:#a0aec0">数据库 + 团体标准 + 溯源体系 —— 构建产业信任基石</div>
+
+  <!-- 三列 -->
+  <div class="three-col">
+    <!-- 列1: 数据库 -->
+    <div class="tc" style="border-color:#1a365d">
+      <div class="top-dot" style="background:#1a365d"></div>
+      <div class="icon-area" style="background:#1a365d">DB</div>
+      <h4 style="color:#1a365d">松潘牦牛专属信息数据库</h4>
+      <div class="desc">
+        率先搭建松潘牦牛全产业链数据平台，联合高校整合养殖环境、牦牛品种、生长周期、防疫记录、加工参数等核心数据资产，实现数据驱动的科学养殖与精准决策。
+      </div>
+      <div class="ph-mini">[ 数据库系统界面截图 ]</div>
+    </div>
+
+    <!-- 列2: 团体标准 -->
+    <div class="tc" style="border-color:#c0392b">
+      <div class="top-dot" style="background:#c0392b"></div>
+      <div class="icon-area" style="background:#c0392b">标准</div>
+      <h4 style="color:#c0392b">高原牦牛肉质量分级团体标准</h4>
+      <div class="desc">
+        联合高校制定高原牦牛肉生产质量分级团体标准，统一地方行业生产规范。从肉质色泽、脂肪分布、营养指标、屠宰工艺等维度建立科学分级体系，填补行业标准空白。
+      </div>
+      <div class="ph-mini">[ 团体标准文件 / 质检报告照片 ]</div>
+    </div>
+
+    <!-- 列3: 溯源体系 -->
+    <div class="tc" style="border-color:#2d5a8e">
+      <div class="top-dot" style="background:#2d5a8e"></div>
+      <div class="icon-area" style="background:#2d5a8e">溯</div>
+      <h4 style="color:#2d5a8e">全流程溯源管理体系</h4>
+      <div class="desc">
+        搭建全流程产品溯源管理体系，完整记录牦牛养殖、屠宰加工、仓储流通等关键环节信息。适配电商线上售卖溯源需求，实现"养殖源头到终端餐桌全程可查、来源可溯"。
+      </div>
+      <div class="ph-mini">[ 溯源系统/区块链一物一码界面 ]</div>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="bottom-bar">
+    <span class="b-item"><span class="dot"></span> 数据库+高校联合</span>
+    <span class="b-item"><span class="dot"></span> 团体标准填补空白</span>
+    <span class="b-item"><span class="dot"></span> 全链路溯源可查</span>
+    <span class="b-item"><span class="dot"></span> 一物一码适配电商</span>
+    <span class="b-item"><span class="dot"></span> 切实保障网销安全</span>
+  </div>
+  <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
+</div>
 <div class="notes">
-  <h3>P5 飞轮模型 — 设计规则</h3>
+  <h3>★ P6 (新增) 技术壁垒与品质保障 — 设计规则</h3>
   <ul>
-    <li><strong>左侧大图640px，右侧标注卡片350px</strong>，主次分明</li>
-    <li>右侧四个齿轮用左侧色条区分，颜色对应齿轮功能色</li>
-    <li>底部两行总结性文字，不需要大段描述</li>
-    <li>飞轮图是核心视觉，占用最大面积</li>
+    <li><strong>三列等宽布局</strong>，每列顶部色条 + 图标区 + 标题 + 描述 + 照片占位</li>
+    <li>三列分别对应: <strong>数据库(蓝)/ 团体标准(红)/ 溯源体系(中蓝)</strong></li>
+    <li>底部深蓝横幅放五个关键词，直观传达项目的<strong>技术硬实力</strong></li>
+    <li>与P3痛点呼应: "无标准"→这里有标准，"溯源缺失"→这里有溯源</li>
+    <li>这是<strong>评委最关心的"技术壁垒"证据页</strong>，展示项目不止是商业模式创新</li>
   </ul>
 </div>
 
-<!-- ====== P6 三栏 ====== -->
+<!-- ====== P7 电商 ====== -->
 <div class="slide p6">
-  <div class="badge">06</div><div class="page-title">电商引擎 + 双轮驱动</div><div class="gold-line"></div>
+  <div class="badge">07</div><div class="page-title">电商引擎 + 双轮驱动</div><div class="gold-line"></div>
   <div style="position:absolute;top:54px;left:76px;font-size:9px;color:#a0aec0">齿轮2: 川山小牧喜小程序 | 齿轮3: 一店一品 + 城市招募官</div>
   <div class="cols">
     <div class="col" style="border-color:#2d5a8e">
@@ -387,19 +438,10 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
   </div>
   <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
 </div>
-<div class="notes">
-  <h3>P6 电商+渠道 — 设计规则</h3>
-  <ul>
-    <li><strong>三列等宽卡片</strong>，每列顶部色条区分 (蓝/红/金)</li>
-    <li>每列只放 1-3 个核心数字，<strong>无多余文字</strong></li>
-    <li>底部金框放市场验证数据 + 排队照片</li>
-    <li>数字 20-28pt 彩色，标签 8pt 灰色</li>
-  </ul>
-</div>
 
-<!-- ====== P7 文化 ====== -->
+<!-- ====== P8 文化 ====== -->
 <div class="slide p7">
-  <div class="badge">07</div><div class="page-title">文化飞轮 · IP阿吉</div><div class="gold-line"></div>
+  <div class="badge">08</div><div class="page-title">文化飞轮 · IP阿吉</div><div class="gold-line"></div>
   <div style="position:absolute;top:54px;left:76px;font-size:9px;color:#a0aec0">从"卖牛肉"到"品文化" —— 让产品溢价来自文化认同</div>
   <div class="left-matrix">
     <div class="gold-t"></div>
@@ -418,20 +460,11 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
   </div>
   <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
 </div>
-<div class="notes">
-  <h3>P7 文化飞轮 — 设计规则</h3>
-  <ul>
-    <li><strong>左上IP矩阵 + 右上会长IP照片 (核心)</strong> + 右上酒店小图</li>
-    <li><strong>会长手持IP照片</strong> 放在这页最显眼位置 (被行业领袖认可的IP)</li>
-    <li>底部深蓝横幅放 72% 大数字 + 品牌数据</li>
-    <li>IP矩阵用蓝底方形小标 + 左对齐文字</li>
-  </ul>
-</div>
 
-<!-- ====== P8 飞轮总结 ====== -->
+<!-- ====== P9 飞轮总结 ====== -->
 <div class="slide p8">
   <div class="gold-top"></div>
-  <div style="position:absolute;top:28px;left:30px;font-size:22px;font-weight:bold;color:#fff">08 飞轮逻辑：系统 vs 系统</div>
+  <div style="position:absolute;top:28px;left:30px;font-size:22px;font-weight:bold;color:#fff">09 飞轮逻辑：系统 vs 系统</div>
   <div style="position:absolute;top:58px;left:30px;width:140px;height:3px;background:#e2c992"></div>
   <div class="diagram">[ 共富飞轮图 ]</div>
   <div class="side">
@@ -451,19 +484,10 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
   </div>
   <div class="gold-bottom"></div>
 </div>
-<div class="notes">
-  <h3>P8 飞轮总结 — 设计规则</h3>
-  <ul>
-    <li><strong>全深蓝背景</strong>，与白色内容页形成视觉对比，作为演讲高潮</li>
-    <li>左侧飞轮图 + 右侧循环步骤列表</li>
-    <li>结尾三句话作为"金句"，颜色金色加粗</li>
-    <li>整页暗示: 这是全篇的"系统 vs 系统"论点转折点</li>
-  </ul>
-</div>
 
-<!-- ====== P9 数据 ====== -->
+<!-- ====== P10 数据 ====== -->
 <div class="slide p9">
-  <div class="badge">09</div><div class="page-title">运营实效数据</div><div class="gold-line"></div>
+  <div class="badge">10</div><div class="page-title">运营实效数据</div><div class="gold-line"></div>
   <div style="position:absolute;top:54px;left:76px;font-size:9px;color:#a0aec0">上线8个月数据验证</div>
   <div class="grid">
     <div class="num-card" style="border-color:#1a365d"><div class="top-dot" style="background:#1a365d"></div><div class="value" style="color:#1a365d">12,680</div><div class="label">注册用户</div></div>
@@ -472,24 +496,15 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
     <div class="num-card" style="border-color:#e2c992"><div class="top-dot" style="background:#e2c992"></div><div class="value" style="color:#b8863a">20.7%</div><div class="label">月复合增长率</div></div>
   </div>
   <div class="bottom">
-    <div class="ph-sm">[ 排队 ]</div>
+    <div class="ph-sm">[ 排队照片 ]</div>
     <p>牦牛牛肉饼: 22,800份 | 32%复购率 | 直播转化率6.2%</p>
   </div>
   <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
 </div>
-<div class="notes">
-  <h3>P9 运营数据 — 设计规则</h3>
-  <ul>
-    <li><strong>2x2 四宫格，每个数字40pt</strong>，占卡片几乎全部面积</li>
-    <li>每个卡片顶部色条区分 (蓝/中蓝/红/金)，<strong>看一眼就知道是哪类数据</strong></li>
-    <li>底部一条金框 + 排队照片 + 一句话补充</li>
-    <li>整页只展示数字，不解释，让数字自己说话</li>
-  </ul>
-</div>
 
-<!-- ====== P10 社会价值 ====== -->
+<!-- ====== P11 社会价值 ====== -->
 <div class="slide p10">
-  <div class="badge">10</div><div class="page-title">社会价值与共富成效</div><div class="gold-line"></div>
+  <div class="badge">11</div><div class="page-title">社会价值与差异化优势</div><div class="gold-line"></div>
   <div style="position:absolute;top:54px;left:76px;font-size:9px;color:#a0aec0">企业49% + 牧民51% 共富机制</div>
   <div class="left">
     <div class="blue-top"></div>
@@ -508,33 +523,27 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
   <div class="competition">
     <h4>差异化竞争优势</h4>
     <div class="gold-l"></div>
-    <div style="font-size:10px;color:#718096">实体产品 + 文化品牌 + 电商直达 + 深度体验 四位一体</div>
-    <div class="text"><p>"实体产品 + 文化品牌 + 电商直达 + 深度体验" 四位一体</p><p style="font-size:9px;color:#718096;font-weight:normal">区块链溯源 · 一物一码 · 牧民控股51%</p></div>
+    <div class="four">
+      <div class="pill">实体产品</div>
+      <div class="pill">文化品牌</div>
+      <div class="pill">电商直达</div>
+      <div class="pill">深度体验</div>
+    </div>
+    <div style="font-size:9px;color:#718096;margin-top:6px">+ 区块链溯源 · 一物一码 · 大数据平台 · 团体标准 · 全链路品控</div>
   </div>
   <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
 </div>
-<div class="notes">
-  <h3>P10 社会价值 — 设计规则</h3>
-  <ul>
-    <li><strong>左蓝框数据列 + 右金框感谢信</strong>，一理性一感性</li>
-    <li>左侧四个数据22pt彩色，蓝/红/金/中蓝四色区分</li>
-    <li>右侧感谢信是整页情感核心，占最大面积</li>
-    <li>底部蓝边框放竞争优势总结，一句话说完</li>
-  </ul>
-</div>
 
-<!-- ====== P11 团队 ====== -->
+<!-- ====== P12 团队 ====== -->
 <div class="slide p11">
-  <div class="badge">11</div><div class="page-title">团队介绍</div><div class="gold-line"></div>
+  <div class="badge">12</div><div class="page-title">团队介绍</div><div class="gold-line"></div>
   <div class="photo-left">[ 团队调研合影 ] &nbsp; 全出血 | 宽530px</div>
   <div class="photo-caption"><p>12次深入松潘 · 零下20度田间调研</p><p class="gold">松潘县数字化助农示范项目 · 校级优秀社会实践团队</p></div>
   <div class="right-box">
     <h4>川农大跨学科团队</h4>
     <div class="gold-l"></div>
     <p><span class="bold">专业覆盖:</span> 经济 · 管理 · 食品 · 计算机</p>
-    <p><span class="bold">导师矩阵:</span></p>
-    <p>思政导师(拔高立意) | 经管导师(打磨模式)</p>
-    <p>食品博士(技术支撑) | 本土企业导师(落地保障)</p>
+    <p><span class="bold">导师矩阵:</span> 思政导师 · 经管导师 · 食品博士 · 本土导师</p>
   </div>
   <div class="ph-sm">[ 校内分享活动照片 ]<small>校级优秀社会实践团队受邀专题分享</small></div>
   <div class="honor-box">
@@ -543,19 +552,10 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
   </div>
   <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
 </div>
-<div class="notes">
-  <h3>P11 团队 — 设计规则</h3>
-  <ul>
-    <li><strong>左侧530px全出血团队合影</strong>，底部深蓝渐变叠文字</li>
-    <li>右上的"川农大跨学科团队"卡片放核心信息</li>
-    <li>右下的"已获认可"金框放奖项背书</li>
-    <li>中间金色虚线框 = 校内分享活动照片</li>
-  </ul>
-</div>
 
-<!-- ====== P12 财务 ====== -->
+<!-- ====== P13 财务 ====== -->
 <div class="slide p12">
-  <div class="badge">12</div><div class="page-title">财务概览</div><div class="gold-line"></div>
+  <div class="badge">13</div><div class="page-title">财务概览</div><div class="gold-line"></div>
   <div class="cols">
     <div class="col" style="border-color:#2d5a8e"><div class="top-dot" style="background:#2d5a8e"></div><div class="yr" style="color:#2d5a8e">2025营收</div><div class="amt" style="color:#1a365d">1,800万</div></div>
     <div class="col" style="border-color:#1a365d"><div class="top-dot" style="background:#1a365d"></div><div class="yr" style="color:#1a365d">2026营收</div><div class="amt" style="color:#1a365d">2,700万</div></div>
@@ -567,22 +567,13 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
     <div class="m-item"><div class="val" style="color:#e2c992">30%-45%</div><div class="lbl">毛利率</div></div>
     <div class="m-item"><div class="val" style="color:#2d5a8e">122.7万</div><div class="lbl">月盈亏平衡点</div></div>
   </div>
-  <div class="funding">资金结构: 政策资金20% + 企业自筹50% + 银行贷款30% | 中央预算内投资最高覆盖总投资的50%</div>
+  <div class="funding">资金结构: 政策资金20% + 企业自筹50% + 银行贷款30% | 中央预算内投资最高覆盖50%</div>
   <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
 </div>
-<div class="notes">
-  <h3>P12 财务 — 设计规则</h3>
-  <ul>
-    <li><strong>三列营收柱状卡片</strong> (蓝/中蓝/红)，28pt数字</li>
-    <li>中间"核心指标"四列并排，简洁清晰</li>
-    <li>底部深蓝条资金结构，一行说完</li>
-    <li>财务页<strong>不要多余文字</strong>，数字和指标本身就有说服力</li>
-  </ul>
-</div>
 
-<!-- ====== P13 规划 ====== -->
+<!-- ====== P14 规划 ====== -->
 <div class="slide p13">
-  <div class="badge">13</div><div class="page-title">发展规划</div><div class="gold-line"></div>
+  <div class="badge">14</div><div class="page-title">发展规划</div><div class="gold-line"></div>
   <div class="diagram">[ 实施路线图 ] &nbsp; 640x445px</div>
   <div class="side">
     <div class="stage" style="border-color:#2d5a8e"><div class="top-dot" style="background:#2d5a8e"></div><div class="yr" style="color:#2d5a8e">2025</div><div class="tt">深耕成渝</div><div class="dt">用户5万/GMV 600万<br>一店一品拓300店</div></div>
@@ -591,16 +582,8 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
   </div>
   <div class="page-footer"></div><div class="page-footer-text">川山小牧喜 · 第十六届三创赛</div>
 </div>
-<div class="notes">
-  <h3>P13 规划 — 设计规则</h3>
-  <ul>
-    <li><strong>左侧路线图 + 右侧三阶段卡片</strong></li>
-    <li>三阶段用蓝/深蓝/红三色区分，顶部色条对应</li>
-    <li>每阶段一行数字 + 一行关键动作，<strong>不展开不解释</strong></li>
-  </ul>
-</div>
 
-<!-- ====== P14 结尾 ====== -->
+<!-- ====== P15 结尾 ====== -->
 <div class="slide p14">
   <div class="gold-top"></div>
   <div class="gold-bar"></div>
@@ -614,16 +597,15 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
   <div class="gold-bottom"></div>
 </div>
 <div class="notes">
-  <h3>P14 结尾 — 设计规则</h3>
+  <h3>P15 结尾 — 设计规则</h3>
   <ul>
     <li><strong>全深蓝呼应封面</strong>，左上金线装饰，视觉闭环</li>
-    <li>情感升华文字分节奏: 陈述(18pt) -> 金句(20pt) -> 分隔线 -> 大字(34pt) -> 致谢</li>
-    <li>底部金线，整页简洁大气，不要杂元素</li>
+    <li>情感升华文字分节奏递进</li>
   </ul>
 </div>
 
 <div style="max-width:1067px;margin:30px auto;background:#16213e;border-radius:10px;padding:24px;border:1px solid #0f3460">
-  <h3 style="color:#e2c992;font-size:16px;margin-bottom:10px">整体设计规范</h3>
+  <h3 style="color:#e2c992;font-size:16px;margin-bottom:10px">整体设计规范 (V2 更新)</h3>
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;color:#a0aec0;font-size:11px;line-height:1.8">
     <div>
       <p style="color:#e2c992;font-weight:bold;margin-bottom:6px">排版规则</p>
@@ -631,23 +613,20 @@ body{background:#1a1a2e;font-family:'Microsoft YaHei','PingFang SC',sans-serif;p
       <p>每页统一页脚: 金线+蓝底+项目名</p>
       <p>一页一个核心信息</p>
       <p>数字 ≥ 28pt，标题 20pt，正文 ≤ 12pt</p>
-      <p>三栏布局间距 12px</p>
     </div>
     <div>
-      <p style="color:#e2c992;font-weight:bold;margin-bottom:6px">配色体系</p>
-      <p style="color:#1a365d">■ 深蓝 #1A365D (主色)</p>
-      <p style="color:#2d5a8e">■ 中蓝 #2D5A8E (辅色)</p>
-      <p style="color:#e2c992">■ 藏金 #E2C992 (点缀)</p>
-      <p style="color:#c0392b">■ 红色 #C0392B (强调)</p>
-      <p style="color:#718096">■ 灰色 #718096 (正文/辅助)</p>
+      <p style="color:#e2c992;font-weight:bold;margin-bottom:6px">叙事逻辑</p>
+      <p>P3 痛点(无标准/缺溯源)</p>
+      <p>→ <strong style="color:#c0392b">P6 技术方案(数据库/标准/溯源)</strong></p>
+      <p>→ P10 差异优势(四合一+技术)</p>
+      <p>← <strong style="color:#e2c992">痛点→方案→优势 闭环</strong></p>
     </div>
     <div>
-      <p style="color:#e2c992;font-weight:bold;margin-bottom:6px">照片处理</p>
-      <p>有照片: 调成统一冷暖色调 + 圆角</p>
-      <p>底部叠加深蓝渐变文字说明</p>
-      <p>占位: 金色虚线框 + 标注内容</p>
-      <p>照片不缩小、不裁剪成奇怪比例</p>
-      <p>合照/人脸特写优先选有情绪的</p>
+      <p style="color:#e2c992;font-weight:bold;margin-bottom:6px">照片占位 (新增)</p>
+      <p>P3: 县委副书记采访</p>
+      <p><strong style="color:#c0392b">P6: 数据库/质检报告/溯源系统</strong></p>
+      <p>P10: 牧民感谢信</p>
+      <p>P11: 团队合影+校内分享</p>
     </div>
   </div>
 </div>
